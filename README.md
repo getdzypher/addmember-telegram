@@ -53,19 +53,44 @@ python 3 init_session.py
 # Features
 ### init session
 run init session to create session for on phone
+```
+python 3 init_session.py
+```
 
 ### create phone.txt
 
 create phone.txt have format same phone.example.txt
 phone;api_id;api_hash
+```
+cp phone.example.json phone.json
+```
 
 ### getdata.py
 
 + get groups, users in group and save folder data
+```
+python 3 getdata.py
+```
+
+### get_data.py
+
++ new update get groups, users in group and save folder data
+```
+python 3 get_data.py
+```
+
+### getdataonlyphone.py
+
++ get data for phone only
+```
+python 3 getdataonlyphone.py
+```
 
 ### addmember.py
 change id group source, target, base on file data/group/+84....csv (need upgrade in the future)
 
 group_target_id = 1331409327
 group_source_id = 1166894130
-
+```
+python 3 addmember.py
+```
