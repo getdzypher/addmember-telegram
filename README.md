@@ -2,11 +2,57 @@
 Add member auto to telegram group
 
 Note: need about 20 accounts to run
-### init session
-run init session to create session for on phone
+
+## How to set this up on your server
+
+### Install dependencies
+```
+sudo apt-get update
+sudo apt-get install python3.6
+sudo apt install python3-pip
+pip install Telethon==0.12
+pip install TgCrypto
+```
+
+### Setting this up
+1. Clone this repository and add permission
+```
+git clone https://github.com/getdzypher/addmember-telegram tgadd
+chmod -R 755 tgadd
+```
+2. Go to the cloned repository "tgadd"
+```
+cd tgadd
+```
+3. Create config.json and phone.txt
+```
+cp config.example.json config.json
+cp phone.example.json phone.json
+```
+4. Edit your configuration
 
 + create app in https://my.telegram.org/apps and have api_id, api_hash
-+ backup session to somewhere
+```
+{
+	"group_target": YOUR_GROUP_ID,
+	"group_source": YOUR_SCRAPE_GROUP_ID,
+	"accounts": [
+		{
+			"phone": "+7900000", //change this
+			"api_id": 1670651, //change this
+			"api_hash": "fa61ee714bc8cd6dfb80edcd354ef2a2" //change this
+		}
+	]
+}
+```
+5. Run session
+```
+python 3 init_session.py
+```
+
+# Features
+### init session
+run init session to create session for on phone
 
 ### create phone.txt
 
